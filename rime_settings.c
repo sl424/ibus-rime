@@ -14,9 +14,9 @@ static struct ColorSchemeDefinition preset_color_schemes[] = {
 };
 
 static struct IBusRimeSettings ibus_rime_settings_default = {
-  FALSE,
+  TRUE,
   IBUS_ORIENTATION_SYSTEM,
-  &preset_color_schemes[0],
+  &preset_color_schemes[2],
 };
 
 struct IBusRimeSettings g_ibus_rime_settings;
@@ -34,7 +34,7 @@ select_color_scheme(struct IBusRimeSettings* settings,
     }
   }
   // fallback to default
-  settings->color_scheme = &preset_color_schemes[0];
+  settings->color_scheme = &preset_color_schemes[2];
 }
 
 void
